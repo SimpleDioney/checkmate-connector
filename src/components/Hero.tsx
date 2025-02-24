@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Chess, Trophy, Users, Zap } from "lucide-react";
+import { King, Trophy, Users, Zap } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -38,7 +38,7 @@ export const Hero = () => {
               <p className="text-slate-600">Conecte-se com jogadores do mundo todo</p>
             </div>
             <div className="glass-card p-6 rounded-lg">
-              <Chess className="h-10 w-10 text-secondary mx-auto mb-4" />
+              <King className="h-10 w-10 text-secondary mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Aprenda & Evolua</h3>
               <p className="text-slate-600">Aulas e puzzles para todos os níveis</p>
             </div>
