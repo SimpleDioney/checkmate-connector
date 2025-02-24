@@ -1,5 +1,12 @@
 
-import { Activity } from "lucide-react";
+import { 
+  Crown, // Rainha
+  Castle, // Torre
+  Cross, // Rei
+  ChevronUp, // Peão
+  Church, // Bispo
+  Shell, // Cavalo
+} from "lucide-react";
 
 type PieceType = "pawn" | "rook" | "knight" | "bishop" | "queen" | "king" | null;
 type PieceColor = "white" | "black";
@@ -68,6 +75,33 @@ const ChessBoard = () => {
     }
   };
 
+  const PieceIcon = ({ piece, color }: { piece: PieceType; color: PieceColor }) => {
+    if (!piece) return null;
+
+    const commonProps = {
+      className: `${getPieceSize(piece)} ${
+        color === 'white' ? 'text-slate-100' : 'text-slate-800'
+      }`
+    };
+
+    switch (piece) {
+      case 'king':
+        return <Cross {...commonProps} />;
+      case 'queen':
+        return <Crown {...commonProps} />;
+      case 'bishop':
+        return <Church {...commonProps} />;
+      case 'knight':
+        return <Shell {...commonProps} />;
+      case 'rook':
+        return <Castle {...commonProps} />;
+      case 'pawn':
+        return <ChevronUp {...commonProps} />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="w-full max-w-[600px] aspect-square">
       <div className="grid grid-cols-8 h-full w-full border-2 border-gray-800">
@@ -78,12 +112,8 @@ const ChessBoard = () => {
               square.color === "white" ? "bg-amber-100" : "bg-amber-800"
             }`}
           >
-            {square.piece && (
-              <Activity
-                className={`${getPieceSize(square.piece)} ${
-                  square.pieceColor === 'white' ? 'text-slate-100' : 'text-slate-800'
-                }`}
-              />
+            {square.piece && square.pieceColor && (
+              <PieceIcon piece={square.piece} color={square.pieceColor} />
             )}
           </div>
         ))}
