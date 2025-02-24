@@ -2,7 +2,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChessKnight } from "lucide-react";
+import { Chess } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
@@ -18,7 +18,7 @@ const NotFound = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-50 to-slate-100">
       <div className="text-center space-y-6">
-        <ChessKnight className="h-20 w-20 text-primary mx-auto" />
+        <Chess className="h-20 w-20 text-primary mx-auto" />
         <h1 className="text-4xl font-bold text-primary">404</h1>
         <p className="text-xl text-slate-600 mb-4">Oops! Página não encontrada</p>
         <Button asChild>

@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ChessKnight } from "lucide-react";
+import { Chess } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
@@ -9,7 +9,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <ChessKnight className="h-8 w-8 text-primary" />
+            <Chess className="h-8 w-8 text-primary" />
             <span className="text-xl font-semibold text-primary">ChessMaster</span>
           </Link>
           
