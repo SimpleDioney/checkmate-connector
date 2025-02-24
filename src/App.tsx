@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Play from "./pages/Play";
 import Learn from "./pages/Learn";
+import Game from "./pages/Game";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Register />} />
           <Route path="/jogar" element={<Play />} />
+          <Route path="/partida" element={<Game />} />
           <Route path="/aprender" element={<Learn />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

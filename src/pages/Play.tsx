@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Trophy, Users, Zap } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { Link } from "react-router-dom";
 
 const Play = () => {
   return (
@@ -14,7 +15,9 @@ const Play = () => {
               <Zap className="h-12 w-12 text-primary" />
               <h3 className="text-xl font-semibold">Partida Rápida</h3>
               <p className="text-gray-600 text-center">Encontre um oponente e comece a jogar imediatamente</p>
-              <Button className="w-full">Jogar Agora</Button>
+              <Button className="w-full" asChild>
+                <Link to="/partida">Jogar Agora</Link>
+              </Button>
             </div>
           </div>
 
